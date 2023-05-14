@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.site {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.masthead {
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid hsla(0, 0%, 0%, .3);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.main-area {
+    background-color: rgba(255, 255, 255, 0.842);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.cards {
+    list-style: none;
+}
+
+.card {
+    position: relative;
+}
+
+.card:hover {
+    background-color: hsla(246, 40%, 30%, .6);
+}
+
+.colophon {
+    padding-top: 35px;
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 5em;
+}
+
+.colophon aside a {
+    text-decoration: underline;
+    color: white;
+}
+
+.card:hover img{
+    opacity: 0.33;
+    background-color: rgb(20, 76, 160);
+    transition: .5s ease;
+}
+
+.caption {
+    position: absolute;
+    left: 1em;
+    bottom: 2em;
+    color: white;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card:hover .caption {
+    opacity: 1;
+}
+
+@supports(grid-area: auto) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(10, 10%);
+        grid-gap: 10px;
+    }
+
+    .double {
+        display: block;
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    @media screen and (min-width: 55em) {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: repeat(5, 20%);
+            grid-gap: 10px;
+        }
+    }
+}
+
+
+    
+        
